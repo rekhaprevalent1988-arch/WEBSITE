@@ -103,15 +103,12 @@ button {
 .school-logo {
     width: 56px;
     height: 56px;
-
     object-fit: contain;
 }
 
 .brand-text h2 {
     font-size: 17px;
-
     letter-spacing: 0.65px;
-
     line-height: 1.2;
 }
 
@@ -119,11 +116,9 @@ button {
     display: block;
 
     font-size: 10px;
-
     color: var(--muted);
 
     margin-top: 4px;
-
     letter-spacing: 0.25px;
 }
 
@@ -239,7 +234,6 @@ nav a:hover::after {
     text-align: center;
 
     position: relative;
-
     overflow: hidden;
 
     background:
@@ -469,8 +463,7 @@ nav a:hover::after {
 }
 
 .section-heading span,
-.about-content > span,
-.application-info > span {
+.about-content > span {
     color: var(--blue);
 
     font-size: 10px;
@@ -981,69 +974,201 @@ nav a:hover::after {
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT — CLEAN FINAL VERSION
+   ========================================================= */
 
 .contact {
     padding: 105px 25px;
+
+    background: #ffffff;
+
+    text-align: center;
 }
 
-.contact-grid {
-    max-width: 950px;
 
-    margin: auto;
+/* CONTACT HEADING */
+
+.contact .section-heading {
+    max-width: 750px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* CONTACT CARDS CONTAINER */
+
+.contact-cards {
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 18px;
+    gap: 25px;
 
-    text-align: center;
+    align-items: stretch;
 }
 
-.contact-grid > div {
-    padding: 30px;
+
+/* INDIVIDUAL CONTACT BOX */
+
+.contact-card {
+    width: 100%;
+
+    min-height: 240px;
+
+    padding: 32px 25px;
+
+    background: #ffffff;
 
     border: 1px solid var(--line);
 
     border-radius: 18px;
 
-    background: #ffffff;
+    display: flex;
 
-    transition: 0.3s;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 28px rgba(
+            18,
+            59,
+            109,
+            0.07
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.contact-grid > div:hover {
-    transform: translateY(-5px);
+.contact-card:hover {
+    transform: translateY(-6px);
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 18px 40px rgba(
+            18,
+            59,
+            109,
+            0.12
+        );
 }
 
-.contact-icon {
-    font-size: 26px;
 
-    color: var(--blue);
+/* CONTACT ICON */
+
+.contact-card .contact-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    font-size: 30px;
+
+    border-radius: 14px;
+
+    background: var(--blue-soft);
 }
 
-.contact-grid h3 {
-    font-size: 16px;
 
-    margin: 9px 0;
+/* CONTACT TITLE */
+
+.contact-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 17px;
+
+    text-align: center;
 }
 
-.contact-grid p {
-    font-size: 13px;
+
+/* CONTACT TEXT */
+
+.contact-card p {
+    margin: 4px 0;
 
     color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    overflow-wrap: anywhere;
 }
+
+
+/* DIRECTIONS BUTTON */
+
+.contact-card .location-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin-top: 17px;
+
+    padding: 11px 18px;
+
+    background: var(--navy);
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+    transition: 0.25s;
+}
+
+.contact-card .location-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(
+            18,
+            59,
+            109,
+            0.2
+        );
+}
+
+
+/* ADMISSION CONTACT BOX */
 
 .contact-admission {
     max-width: 750px;
 
-    margin: 50px auto 0;
+    margin: 45px auto 0;
 
-    padding: 35px;
+    padding: 35px 25px;
 
     text-align: center;
 
@@ -1056,6 +1181,8 @@ nav a:hover::after {
 
 .contact-admission h3 {
     font-size: 20px;
+
+    text-align: center;
 }
 
 .contact-admission p {
@@ -1064,6 +1191,8 @@ nav a:hover::after {
     font-size: 13px;
 
     margin: 5px 0 20px;
+
+    text-align: center;
 }
 
 
@@ -1208,8 +1337,7 @@ footer {
         display: block;
     }
 
-    .admission-cards,
-    .contact-grid {
+    .admission-cards {
         grid-template-columns: 1fr;
     }
 
@@ -1226,6 +1354,20 @@ footer {
     .call-button {
         width: 100%;
     }
+
+
+    /* CONTACT TABLET/MOBILE */
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+    .contact-card {
+        min-height: 210px;
+    }
+
 }
 
 
@@ -1300,6 +1442,11 @@ footer {
     .footer-links {
         justify-content: center;
     }
+
+    .contact-card {
+        padding: 28px 18px;
+    }
+
 }
 
 
@@ -1317,238 +1464,6 @@ footer {
 
     * {
         transition: none !important;
-    }
-    }
-
-.location-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #123b6d;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: 0.3s ease;
-}
-
-.location-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.location-button:active {
-    transform: translateY(0);
-}
-/* ================= CONTACT CARDS ================= */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 35px;
-}
-
-.contact-grid > div {
-    background: #ffffff;
-    padding: 30px 22px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(18, 59, 109, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-grid > div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-.contact-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.contact-grid h3 {
-    margin: 8px 0 12px;
-    text-align: center;
-}
-
-.contact-grid p {
-    margin: 6px 0;
-    text-align: center;
-    line-height: 1.6;
-}
-
-/* ================= GET DIRECTIONS ================= */
-
-.location-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 18px;
-    padding: 12px 20px;
-    background: #123b6d;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 700;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.location-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .contact-grid > div {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-}
-
-/* =========================================================
-   BDS CONVENT SCHOOL — CONTACT SECTION FINAL FIX
-   ========================================================= */
-
-#contact {
-    text-align: center;
-}
-
-#contact .section-heading {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-container {
-    max-width: 1050px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    align-items: stretch;
-}
-
-.contact-box {
-    background: #ffffff;
-    padding: 30px 22px;
-    min-height: 220px;
-
-    border: 1px solid var(--line);
-    border-radius: 18px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    box-shadow: 0 8px 25px rgba(18, 59, 109, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(18, 59, 109, 0.12);
-}
-
-.contact-box .contact-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.contact-box h3 {
-    margin: 8px 0 12px;
-    text-align: center;
-    font-size: 17px;
-}
-
-.contact-box p {
-    margin: 6px 0;
-    text-align: center;
-    line-height: 1.6;
-    color: var(--muted);
-    font-size: 13px;
-    word-break: break-word;
-}
-
-.contact-box .location-button {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: auto;
-
-    margin-top: 18px;
-    padding: 12px 20px;
-
-    background: var(--navy);
-    color: #ffffff;
-
-    border-radius: 8px;
-
-    font-weight: 700;
-    text-align: center;
-
-    transition: all 0.3s ease;
-}
-
-.contact-box .location-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ================= CONTACT MOBILE ================= */
-
-@media (max-width: 950px) {
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .contact-box {
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 700px) {
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .contact-box {
-        min-height: 200px;
-        padding: 28px 18px;
     }
 
 }
