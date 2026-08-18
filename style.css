@@ -1319,3 +1319,24 @@ footer {
         transition: none !important;
     }
     }
+
+.location-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #123b6d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.location-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.location-button:active {
+    transform: translateY(0);
+}
