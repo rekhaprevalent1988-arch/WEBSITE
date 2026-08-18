@@ -1340,3 +1340,83 @@ footer {
 .location-button:active {
     transform: translateY(0);
 }
+/* ================= CONTACT CARDS ================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.contact-grid > div {
+    background: #ffffff;
+    padding: 30px 22px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(18, 59, 109, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-grid > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-grid h3 {
+    margin: 8px 0 12px;
+    text-align: center;
+}
+
+.contact-grid p {
+    margin: 6px 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ================= GET DIRECTIONS ================= */
+
+.location-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    padding: 12px 20px;
+    background: #123b6d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.location-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-grid > div {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
