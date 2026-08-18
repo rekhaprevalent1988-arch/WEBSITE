@@ -1420,3 +1420,135 @@ footer {
     }
 
 }
+
+/* =========================================================
+   BDS CONVENT SCHOOL — CONTACT SECTION FINAL FIX
+   ========================================================= */
+
+#contact {
+    text-align: center;
+}
+
+#contact .section-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.contact-box {
+    background: #ffffff;
+    padding: 30px 22px;
+    min-height: 220px;
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(18, 59, 109, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(18, 59, 109, 0.12);
+}
+
+.contact-box .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-box h3 {
+    margin: 8px 0 12px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.contact-box p {
+    margin: 6px 0;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--muted);
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.contact-box .location-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+
+    margin-top: 18px;
+    padding: 12px 20px;
+
+    background: var(--navy);
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.contact-box .location-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= CONTACT MOBILE ================= */
+
+@media (max-width: 950px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-box {
+        min-height: 200px;
+        padding: 28px 18px;
+    }
+
+}
